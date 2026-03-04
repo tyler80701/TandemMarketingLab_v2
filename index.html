@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO 設定 -->
+  <title>良玥有限公司 Tandem Marketing Lab | 餐飲與飯店旅宿整合行銷首選</title>
+  <meta name="description" content="良玥 (Tandem Marketing Lab) 專注於餐飲與旅遊產業的整合行銷。提供數位公關創造新聞價值、導入訂房與票券系統投遞營收型廣告、品牌價值再造與高轉換網站建設。">
+  <meta name="keywords" content="餐飲行銷, 飯店行銷, 數位公關, SEO優化, 網站建設, 品牌再造, 營收型廣告, 整合行銷">
+  
+  <!-- Schema.org 結構化資料 (提升 Google 搜尋精準度) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "良玥有限公司 Tandem Marketing Lab",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    "url": "https://您的網址.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "信義區",
+      "addressLocality": "台北市",
+      "addressCountry": "TW"
+    },
+    "description": "專注於餐飲與飯店旅宿產業的整合行銷實驗室，提供數位公關、營收型廣告、品牌價值再造與高轉換網站建設。",
+    "areaServed": "Taiwan",
+    "knowsAbout": ["餐飲行銷", "飯店行銷", "數位公關", "SEO優化", "網站建設", "品牌再造", "營收型廣告"]
+  }
+  </script>
+
+  <!-- 引入 Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- 引入 Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- 自訂動畫與樣式 -->
+  <style>
+    @keyframes float-slow {
+      0%, 100% { transform: translate(0px, 0px); }
+      50% { transform: translate(-15px, 20px); }
+    }
+    @keyframes float-medium {
+      0%, 100% { transform: translate(0px, 0px); }
+      50% { transform: translate(20px, -15px); }
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+    .animate-float-medium { animation: float-medium 6s ease-in-out infinite; }
+    .animate-pulse-ring { animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+    
+    html { scroll-behavior: smooth; }
+    
+    /* Navbar 滾動效果的過渡 */
+    #navbar { transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="font-sans text-slate-900 bg-slate-50 selection:bg-amber-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 bg-transparent py-5">
+    <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
+          T
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-lg leading-none tracking-tight">良玥有限公司</span>
+          <span class="text-xs text-slate-500 font-medium tracking-widest uppercase mt-1">Tandem Marketing Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-amber-600 transition-colors">關於良玥</a>
+        <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-amber-600 transition-colors">核心服務</a>
+        <a href="#expertise" class="text-sm font-semibold text-slate-600 hover:text-amber-600 transition-colors">實績與優勢</a>
+        <a href="#contact" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
+          免費品牌健檢 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-900">
+        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 py-4 px-6 flex flex-col space-y-4">
+      <a href="#about" class="mobile-link text-base font-semibold text-slate-600 py-2 border-b border-slate-50">關於良玥</a>
+      <a href="#services" class="mobile-link text-base font-semibold text-slate-600 py-2 border-b border-slate-50">核心服務</a>
+      <a href="#expertise" class="mobile-link text-base font-semibold text-slate-600 py-2 border-b border-slate-50">實績與優勢</a>
+      <a href="#contact" class="mobile-link px-5 py-3 mt-2 bg-amber-500 text-white text-center font-semibold rounded-lg">免費品牌健檢</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <!-- Background Decorative SVG -->
+    <div class="absolute top-0 right-0 w-full h-full overflow-hidden -z-10 opacity-30 pointer-events-none">
+      <svg class="absolute top-10 right-[-10%] w-[800px] h-[800px] text-amber-500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.3,-46.1C90.8,-33.1,96.8,-16.6,95.5,-0.7C94.2,15.1,85.6,30.3,74.7,42.5C63.8,54.7,50.7,64,36.4,71.5C22.1,79,6.7,84.7,-8.4,82.8C-23.4,80.9,-38.1,71.4,-51.1,60.2C-64.1,49,-75.4,36,-81.9,20.8C-88.4,5.6,-90.1,-11.8,-84.9,-27.2C-79.6,-42.6,-67.4,-55.9,-53.2,-63.3C-39,-70.7,-22.8,-72.1,-7.4,-75.7C8,-79.3,24,-85.1,44.7,-76.4Z" transform="translate(100 100) scale(1.1)" />
+      </svg>
+    </div>
+
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <!-- Left Content -->
+        <div class="w-full lg:w-1/2 flex flex-col items-start relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100/80 text-amber-800 text-sm font-bold mb-6 border border-amber-200">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-600"></span>
+            </span>
+            餐飲與飯店旅宿數位轉型首選
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-6 tracking-tight">
+            讓您的品牌，<br/>
+            成為<span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">市場的唯一。</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
+            良玥 (Tandem Marketing Lab) 是專注於餐飲與旅遊產業的整合行銷實驗室。我們融合深厚的公關底蘊與實戰數據，為您打造觸動人心的品牌體驗，將流量轉化為真實營收。
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-xl shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 text-lg">
+              立即啟動品牌升級 <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="#services" class="px-8 py-4 bg-white text-slate-700 font-bold rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all flex items-center justify-center text-lg">
+              探索解決方案
+            </a>
+          </div>
+          
+          <div class="mt-10 flex items-center gap-4 text-sm text-slate-500 font-medium">
+            <div class="flex -space-x-3">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=100&h=100" alt="餐飲行銷合作客戶">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" alt="飯店旅宿轉型合作客戶">
+              <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" alt="品牌公關合作客戶">
+            </div>
+            <p>經手專案成功帶來單年 750+ 宴會需求<br/>與高轉換真實預訂營收</p>
+          </div>
+        </div>
+
+        <!-- Right Image & Animated SVG -->
+        <div class="w-full lg:w-1/2 relative h-[400px] md:h-[500px]">
+          <!-- Dynamic SVG Elements overlaying the image -->
+          <svg class="absolute -top-10 -left-10 w-32 h-32 text-orange-400 z-20 animate-float-slow" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5" class="animate-spin-slow"></circle>
+            <circle cx="50" cy="50" r="20" fill="currentColor" opacity="0.2"></circle>
+            <path d="M50 20 L50 80 M20 50 L80 50" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+          
+          <svg class="absolute -bottom-8 -right-8 w-40 h-40 text-slate-800 z-20 animate-float-medium" viewBox="0 0 100 100">
+            <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(45 50 50)"></rect>
+            <circle cx="50" cy="50" r="10" fill="currentColor"></circle>
+          </svg>
+
+          <!-- Main Hero Image -->
+          <div class="relative w-full h-full rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl shadow-slate-900/10 group">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1600" 
+              alt="良玥有限公司 - 餐飲與飯店旅宿整合行銷與數位轉型首選" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+            
+            <!-- Floating Badge -->
+            <div class="absolute bottom-6 left-6 right-6 md:left-auto md:right-6 bg-white/95 backdrop-blur rounded-xl p-4 shadow-xl flex items-center gap-4 animate-float-slow border border-slate-100">
+              <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                <i data-lucide="trending-up" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">SEO 排名躍升至首頁</p>
+                <p class="text-xs text-slate-500">真實帶動線上營收成長</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section (About) -->
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="w-full lg:w-1/2 order-2 lg:order-1 relative">
+          <div class="absolute inset-0 bg-amber-500 rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200" 
+            alt="Tandem Marketing Lab 具備10年以上餐飲與旅遊公關行銷深厚底蘊" 
+            class="rounded-2xl shadow-xl w-full h-[400px] object-cover"
+          >
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-slate-900 rounded-full flex items-center justify-center text-white border-4 border-white shadow-lg z-10">
+            <div class="text-center">
+              <p class="text-2xl font-bold leading-none">10+</p>
+              <p class="text-[10px] uppercase tracking-wider mt-1">年深耕</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="w-full lg:w-1/2 order-1 lg:order-2">
+          <h2 class="text-amber-500 font-bold tracking-wider uppercase text-sm mb-3">我們的優勢 / Why Choose Us</h2>
+          <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+            我們不只懂行銷，<br/>更懂「餐飲與旅遊」的脈動
+          </h3>
+          <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+            創辦人具備深厚的餐飲、旅遊與公關背景。我們深知一間餐廳的翻桌率痛點，也明白一家飯店在淡旺季的行銷挑戰。良玥 (Tandem) 的存在，就是為解決真實世界的商業難題，提供「接地氣」且「具成效」的整合方案。
+          </p>
+          
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+              <span class="text-slate-700 font-medium">深厚公關宣傳底蘊，善於創造新聞議題與品牌價值</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+              <span class="text-slate-700 font-medium">熟稔產業術語與營運痛點，與第一線溝通零成本</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+              <span class="text-slate-700 font-medium">實戰導入訂房與票券系統，讓行銷綁定真實預訂營收</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 shrink-0 mt-0.5"></i>
+              <span class="text-slate-700 font-medium">數據導向優化官網與 UX，全面提升顧客與員工體驗</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Specific Stats Section - HIGH IMPACT -->
+  <section id="expertise" class="py-20 bg-slate-900 relative overflow-hidden">
+    <!-- Abstract Background SVG -->
+    <svg class="absolute top-0 left-0 w-full h-full text-slate-800 opacity-30 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+      <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor"></path>
+    </svg>
+
+    <div class="container mx-auto px-6 md:px-12 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-amber-500 font-bold tracking-wider uppercase text-sm mb-2">實績亮點 / Proven Results</h2>
+        <h3 class="text-3xl font-extrabold text-white">用數字證明，我們能帶來真實營收</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 lg:divide-x divide-slate-800">
+        <div class="pt-6 lg:pt-0">
+          <p class="text-5xl font-extrabold text-white mb-2">750<span class="text-amber-500">+</span></p>
+          <p class="text-amber-500 font-bold mb-2">單年宴會預約單</p>
+          <p class="text-slate-400 text-sm leading-relaxed px-4">建立全新官網並優化預約表單，<br/>2025 全年成功引入海量商機。</p>
+        </div>
+        <div class="pt-6 lg:pt-0">
+          <p class="text-5xl font-extrabold text-white mb-2 flex justify-center items-center gap-2">
+            <span class="text-3xl text-slate-500 line-through">15</span>
+            <i data-lucide="arrow-right" class="w-6 h-6 text-amber-500"></i>
+            6
+          </p>
+          <p class="text-amber-500 font-bold mb-2">SEO 排名大幅躍升</p>
+          <p class="text-slate-400 text-sm leading-relaxed px-4">透過新官網架構與內容優化，<br/>將重要關鍵字推升至搜尋引擎首頁。</p>
+        </div>
+        <div class="pt-6 lg:pt-0">
+          <p class="text-5xl font-extrabold text-white mb-2">營收<span class="text-amber-500">級</span></p>
+          <p class="text-amber-500 font-bold mb-2">打破虛榮廣告指標</p>
+          <p class="text-slate-400 text-sm leading-relaxed px-4">導入訂房/票券轉換系統，讓 Google 廣告<br/>直接看見真實訂單與預訂營收。</p>
+        </div>
+        <div class="pt-6 lg:pt-0">
+          <p class="text-5xl font-extrabold text-white mb-2">新聞<span class="text-amber-500">力</span></p>
+          <p class="text-amber-500 font-bold mb-2">自帶流量體質</p>
+          <p class="text-slate-400 text-sm leading-relaxed px-4">發揮公關宣傳背景優勢，<br/>為品牌策劃具爆發力的新聞價值議題。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-slate-50 relative">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-amber-500 font-bold tracking-wider uppercase text-sm mb-3">核心服務 / Core Services</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+          全方位的品牌加速器
+        </h3>
+        <p class="text-slate-600 text-lg">
+          從策略規劃、公關議題到系統落地，良玥為您打造一站式的整合行銷實驗室。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <i data-lucide="megaphone" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">數位公關與社群聲量</h4>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            結合深厚公關宣傳背景，不僅精準掌握社群演算法，更能為品牌創造具爆發力的新聞價值與媒體話題。
+          </p>
+          <a href="#contact" class="text-blue-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+            了解更多 <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+          <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+            <i data-lucide="target" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">營收型廣告與系統串接</h4>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            協助導入訂房、票券或訂餐系統。讓 Google/Meta 廣告不再只看點閱率，而是實實在在追蹤訂單與預訂營收。
+          </p>
+          <a href="#contact" class="text-amber-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+            了解更多 <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+          <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+            <i data-lucide="sparkles" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">品牌價值再造</h4>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            重新定錨品牌市場定位 (Positioning)。從視覺 CI 設計、品牌故事撰寫到包裝設計，賦予餐旅品牌全新生命力。
+          </p>
+          <a href="#contact" class="text-purple-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+            了解更多 <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+          <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+            <i data-lucide="globe" class="w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">高轉換網站與 SEO</h4>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            打造兼具美感與流暢度的品牌官網。透過優化 UX 與預約表單，曾單年引入 750+ 宴會需求，並大幅推升 SEO 排名。
+          </p>
+          <a href="#contact" class="text-teal-600 font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+            了解更多 <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-24 bg-white relative">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="bg-gradient-to-br from-amber-500 to-orange-600 rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden shadow-2xl shadow-orange-500/20">
+        <!-- Decorative circles -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-slate-900/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+          <div class="lg:w-2/3">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+              準備好讓您的品牌<br/>在市場中脫穎而出了嗎？
+            </h2>
+            <p class="text-orange-50 text-lg md:text-xl mb-0 max-w-2xl font-medium">
+              立即與良玥行銷團隊聯繫，我們提供首次 <span class="font-bold text-white bg-slate-900/20 px-2 py-1 rounded">免費品牌健檢與初步策略諮詢</span>。
+              名額有限，立即啟動您的營收增長引擎！
+            </p>
+          </div>
+          
+          <div class="lg:w-1/3 w-full flex flex-col gap-4">
+            <button class="w-full bg-slate-900 text-white font-bold text-lg py-5 px-8 rounded-xl hover:bg-slate-800 hover:-translate-y-1 shadow-lg transition-all flex items-center justify-center gap-2 group">
+              <i data-lucide="phone-call" class="w-5 h-5 group-hover:animate-bounce"></i>
+              立即預約諮詢
+            </button>
+            <p class="text-center text-orange-100 text-sm font-medium flex items-center justify-center gap-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 24小時內專人聯繫
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300 py-16 border-t border-slate-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-lg flex items-center justify-center font-bold text-lg">
+              T
+            </div>
+            <span class="font-bold text-xl text-white">良玥有限公司</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed max-w-sm">
+            Tandem Marketing Lab 專注於餐飲與旅遊產業。我們是您的行銷大腦，與您「串聯 (Tandem)」並進，實驗出無限可能的商業獲利模式。
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-6">服務項目</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-amber-500 transition-colors">數位公關與社群</a></li>
+            <li><a href="#" class="hover:text-amber-500 transition-colors">成效廣告與系統導入</a></li>
+            <li><a href="#" class="hover:text-amber-500 transition-colors">品牌價值再造</a></li>
+            <li><a href="#" class="hover:text-amber-500 transition-colors">高轉換網站建設</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">聯絡我們</h4>
+          <ul class="space-y-3 text-slate-400">
+            <li class="flex items-center gap-2">台北市信義區 (示範地址)</li>
+            <li class="flex items-center gap-2">contact@tandemlab.tw</li>
+            <li class="flex items-center gap-2">Mon - Fri, 09:00 - 18:00</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; <span id="current-year"></span> 良玥有限公司 Tandem Marketing Lab. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-white transition-colors">隱私權政策</a>
+          <a href="#" class="hover:text-white transition-colors">服務條款</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 網頁互動腳本 -->
+  <script>
+    // 初始化 Lucide 圖示
+    lucide.createIcons();
+
+    // 動態年份
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 處理導覽列滾動效果
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
+        navbar.classList.remove('bg-transparent', 'py-5');
+      } else {
+        navbar.classList.add('bg-transparent', 'py-5');
+        navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
+      }
+    });
+
+    // 處理手機版選單開關
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+        menuIconClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // 點擊手機版選單連結後自動關閉選單
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if(isMenuOpen) toggleMenu();
+      });
+    });
+  </script>
+</body>
+</html>
